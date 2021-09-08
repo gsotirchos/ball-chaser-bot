@@ -36,7 +36,7 @@ class CommandRobotClient:
     # This method processes the image, detects, and returns the location of a ball (circle)
     def _detect_ball(self, img):
         #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        #gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
         # adjust alpha and beta
         alpha=2
@@ -56,41 +56,40 @@ class CommandRobotClient:
         dp = 1
         minDist = 700
         param1 = 1100
-        param2 = 25
-        minRadii = [10, 30]
-        maxRadii = [30, 90]
+        param2 = 20
+        minRadius = 10
+        maxRadius = 90
 
-        for i in range(len(minRadii)):
-            circle = cv2.HoughCircles(
-                combined,
-                method=cv2.HOUGH_GRADIENT,
-                dp=dp,
-                minDist=minDist,
-                param1=param1,
-                param2=param2,
-                minRadius=minRadii[i],
-                maxRadius=maxRadii[i])
+        circle = cv2.HoughCircles(
+            combined,
+            method=cv2.HOUGH_GRADIENT,
+            dp=dp,
+            minDist=minDist,
+            param1=param1,
+            param2=param2,
+            minRadius=minRadius,
+            maxRadius=maxRadius)
 
-            if circle is not None:
-                circle_data = dict(
-                    zip({"x", "y", "r"},
-                        round(circle[0, 0]).astype("int")))
+        if circle is not None:
+            circle_data = dict(
+                zip({"x", "y", "r"},
+                    round(circle[0, 0]).astype("int")))
 
-                return circle_data
+            return circle_data
 
     # This callback method continuously executes and reads the image data
     def _process_image_callback(self, data):
         # convert ROS image message to OpenCV image
-        img = self._bridge.imgmsg_to_cv2(data, desired_encoding="mono8")
+        img = self._bridge.imgmsg_to_cv2(data, desired_encoding="passthrough")
 
         # detect the ball location in the image
         ball = self._detect_ball(img)
         if ball is not None:
             ball_pos = int(floor(ball["x"] / (img.shape[1] / 3)))
-            msg = "Ball (x, y, r): ("
+            msg = ("Ball (x, y, r): ("
                 + str(ball["x"]) + ", "
                 + str(ball["y"]) + ", "
-                + str(ball["r"]) + ")"
+                + str(ball["r"]) + ")")
 
             # Set desired velocities according to ball position, if found
             if ball_pos == 0:  # left
