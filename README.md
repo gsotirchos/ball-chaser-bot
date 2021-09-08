@@ -1,4 +1,4 @@
-# Package Name
+# ball-chaser-bot
 
 ## Overview
 
@@ -75,7 +75,7 @@ Provides a service for publishing drive commands to the robots actuators.
 
 #### Published Topics
 
-* **`/cmd_vel`** ([geometry_msgs/Twist])
+* **`/cmd_vel`** ([geometry_msgs/Twist](http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html))
 
     The requested `linear_x` and `angular_z` velocities for the robot wheel joints.
 
