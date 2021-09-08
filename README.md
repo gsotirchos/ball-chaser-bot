@@ -47,7 +47,7 @@ catkin_make
 2. Start the `ball_chaser` and the `process_image_opencv` nodes:
 
     ``` bash
-    roslaunch ball_chaser ball_chaser.launch use_opencv:=true
+    roslaunch ball_chaser ball_chaser.launch
     ```
 
     Or to use the "dumb" `process_image` node (without OpenCV):
@@ -64,8 +64,8 @@ catkin_make
 
      Arguments:
 
-     - **`use_opencv`**: Whether to use the OpenCV image processing node or the "dumb" one.
-        Default: `true`.
+     - **`use_opencv`**: Whether to use the OpenCV image processing node or the "dumb" one.<br/>
+        Default: `true` (Optional)
 
 ## Nodes
 
