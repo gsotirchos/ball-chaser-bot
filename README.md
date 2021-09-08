@@ -6,14 +6,14 @@ These are two packages containing a Gazebo environment with a skid-steer drive
 
 ### License
 
-The source code is released under a [MIT license](LICENSE).
+The source code is released under an [MIT license](LICENSE).
 
 **Author/Maintainer: George Sotirchos**
 
 The ball-chaser-bot package has been tested under [ROS] Noetic on Ubuntu 20.04.
 This is experimental, personal project code, and possibly subject to frequent changes with any need for explanation disclaimed.
 
-![Example image](doc/example.jpg)
+![Example image](media/recording.gif)
 
 ## Installation
 
@@ -113,3 +113,4 @@ Please report bugs and request features using the [Issue Tracker](https://github
 [ROS]: http://www.ros.org
 [Gazebo plugin]: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive
 [OpenCV]: https://docs.opencv.org/master/
+
