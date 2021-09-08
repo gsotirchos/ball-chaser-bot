@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>my_robot</name>
+  <version>1.0.0</version>
+  <description>
+      Package for spawning a 4-wheeled skid-steer drive bot inside a Gazebo environment with some spheres.
+  </description>
+
+  <author email="gsotirch@gmail.com">George Sotirchos</author>
+  <maintainer email="gsotirch@gmail.com">George Sotirchos</maintainer>
+  <license>MIT</license>
+  <url type="website">https://github.com/7555G/ball-chaser-bot</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
