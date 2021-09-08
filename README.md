@@ -10,8 +10,7 @@ The source code is released under an [MIT license](LICENSE).
 
 **Author/Maintainer: George Sotirchos**
 
-The ball-chaser-bot package has been tested under [ROS] Noetic on Ubuntu 20.04.
-This is experimental, personal project code, and possibly subject to frequent changes with any need for explanation disclaimed.
+The ball-chaser-bot package has been tested under [ROS] Noetic on Ubuntu 20.04. This is experimental, personal project code, and possibly subject to frequent changes with any need for explanation disclaimed.
 
 ![Example image](media/recording.gif)
 
