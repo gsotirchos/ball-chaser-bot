@@ -2,7 +2,7 @@
 
 ## Overview
 
-These are two packages containing a Gazebo environment with a skid-steer drive
+These are two packages containing a Gazebo environment with a skid-steer drive robot equipped with a camera and a Hokuyo lidar. There is one node for commanding robot joints and a second one for processing the camera image, detecting round objects, and sending the appropriate velocities commands.
 
 ### License
 
