@@ -1,10 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- ros_args.launch -->
   <arg name="use_opencv" default="true" doc="Whether to use the OpenCV image processng node or the 'dumb' one."/>
 
   <!-- The drive_bot node -->
-  <node name="drive_bot" type="drive_bot" pkg="ball_chaser" output="screen">
-  </node>
+  <node name="drive_bot" type="drive_bot" pkg="ball_chaser" output="screen"/>
 
   <!-- The process_image node, depends on "use_opencv" argument -->
   <group if="$(arg use_opencv)">
