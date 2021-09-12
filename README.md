@@ -80,7 +80,7 @@ Provides a service for publishing drive commands to the robots actuators.
 
 #### Services
 
-* **`/ball_chaser/command_robot`** ([ball_chaser/DriveToTarget](ball_chaser/srv/DriveToTarget.srv))
+* **`~command_robot`** ([ball_chaser/DriveToTarget](ball_chaser/srv/DriveToTarget.srv))
 
     Publishes the requested the requested `linear_x` and `angular_z` velocities to `/cmd_vel` topic.
 
@@ -91,7 +91,7 @@ Provides a service for publishing drive commands to the robots actuators.
 
 ### process_image_opencv
 
-Processes the camera image published at `/camera/rgb/image_raw` and requests the appropriate drive commands via the `/ball_chaser/command_robot` service.
+Processes the camera image published at `/camera/rgb/image_raw` and requests the appropriate drive commands via the `~command_robot` service.
 
 #### Subscribed Topics
 
