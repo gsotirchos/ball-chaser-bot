@@ -109,6 +109,6 @@ Processes the camera image published at `/camera/rgb/image_raw` and requests the
 
 Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/ball-chaser-bot/issues).
 
-ROS: http://www.ros.org
-Gazebo plugin: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive
+ROS: http://www.ros.org</br>
+Gazebo plugin: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive</br>
 OpenCV: https://docs.opencv.org/master/
