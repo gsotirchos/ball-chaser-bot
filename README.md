@@ -10,7 +10,7 @@ The source code is released under an [MIT license](LICENSE).
 
 **Author/Maintainer: George Sotirchos**
 
-The ball-chaser-bot package has been tested under [ROS] Noetic on Ubuntu 20.04. This is experimental, personal project code, and possibly subject to frequent changes with any need for explanation disclaimed.
+The ball-chaser-bot package has been tested under [ROS](http://www.ros.org) Noetic on Ubuntu 20.04. This is experimental, personal project code, and possibly subject to frequent changes with any need for explanation disclaimed.
 
 ![Example image](media/recording.gif)
 
@@ -59,7 +59,7 @@ catkin_make
 
 * **my_robot/launch/world.launch:** A Gazebo simulation is opened with 4-wheeled skid-steer drive robot equipped with a camera and a Hokuyo lidar spawned in an office environment containing some balls, along with an RViz window showing the camera image and the lidar measurements.
 
-* **ball_chaser/launch/ball_chase.launch:**
+* **ball_chaser/launch/ball_chase.launch:** Starts the `drive_bot` and `process_image_opencv`/`process_image` nodes.
 
      Arguments:
 
@@ -109,7 +109,6 @@ Processes the camera image published at `/camera/rgb/image_raw` and requests the
 
 Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/ball-chaser-bot/issues).
 
-[ROS]: http://www.ros.org
-[Gazebo plugin]: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive
-[OpenCV]: https://docs.opencv.org/master/
-
+ROS: http://www.ros.org
+Gazebo plugin: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive
+OpenCV: https://docs.opencv.org/master/
