@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(ball_chaser)
 
+add_compile_options(-std=c++11)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(catkin REQUIRED COMPONENTS

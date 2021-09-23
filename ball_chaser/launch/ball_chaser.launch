@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <!-- ros_args.launch -->
+  <!-- arg: Use OpenCV -->
   <arg name="use_opencv" default="true" doc="Whether to use the OpenCV image processng node or the 'dumb' one."/>
 
   <!-- The drive_bot node -->

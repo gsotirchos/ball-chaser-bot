@@ -3,7 +3,7 @@
   <name>ball_chaser</name>
   <version>1.0.0</version>
   <description>
-      Package containing the nodes for ball detection and sending drive commands to a wheel robot.
+      Package containing the nodes for ball detection and sending drive commands to a wheeled robot.
   </description>
 
   <author email="gsotirch@gmail.com">George Sotirchos</author>
