@@ -3,7 +3,7 @@
   <name>ball_chaser_bot</name>
   <version>1.0.0</version>
   <description>
-      Metapackage containing packages for a 4-wheeled skid-steer drive bot that finds spherical objects using OpenCV.
+    Metapackage containing packages for a 4-wheeled skid-steer drive bot that finds spherical objects using OpenCV.
   </description>
 
   <author email="gsotirch@gmail.com">George Sotirchos</author>
