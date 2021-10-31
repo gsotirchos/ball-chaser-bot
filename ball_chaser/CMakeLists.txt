@@ -29,8 +29,7 @@ generate_messages(
 ## catkin specific configuration ##
 ###################################
 
-catkin_package(
-)
+catkin_package()
 
 ###########
 ## Build ##

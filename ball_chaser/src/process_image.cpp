@@ -15,11 +15,16 @@ class CommandRobotClient {
         client_ = n_.serviceClient<ball_chaser::DriveToTarget>("/ball_chaser/command_robot");
 
         // Subscribe to /camera/rgb/image_raw topic to read the image data inside the process_image_callback function
-        sub1_ = n_.subscribe("/camera/rgb/image_raw", 10, &CommandRobotClient::process_image_callback, this);
+        sub_ = n_.subscribe(
+            "/camera/rgb/image_raw",
+            10,
+            &CommandRobotClient::process_image_callback,
+            this
+        );
     }
 
     // This callback method continuously executes and reads the image data
-    void process_image_callback(const sensor_msgs::Image img) {
+    void process_image_callback(sensor_msgs::Image const & img) {
         int cnt = 0;
         bool ball_seen = false;
         int ball_pos;
@@ -77,7 +82,7 @@ class CommandRobotClient {
   private:
     ros::NodeHandle n_;
     ros::ServiceClient client_;
-    ros::Subscriber sub1_;
+    ros::Subscriber sub_;
 
     float current_lin_x_;
     float current_ang_z_;
@@ -96,7 +101,7 @@ class CommandRobotClient {
     }
 
     // This method checks whether the pixel at the specified location of a sensor_msgs/Image message data is white (i.e. if all its RGB values are 255)
-    bool is_white_pixel_(const sensor_msgs::Image & img, int i) {
+    bool is_white_pixel_(sensor_msgs::Image const & img, int i) {
         for (int n = 0; n < 3; n++) {
             if (img.data[3 * i + n] != 255) {
                 return false;
