@@ -15,7 +15,7 @@ class CommandRobotClient:
         self._client = rospy.ServiceProxy("/ball_chaser/command_robot", DriveToTarget)
 
         # Subscribe to /camera/rgb/image_raw topic to read the image data inside the process_image_callback function
-        self._pub1 = rospy.Subscriber("/camera/rgb/image_raw", Image, self._process_image_callback)
+        self._sub = rospy.Subscriber("/camera/rgb/image_raw", Image, self._process_image_callback)
 
         # Object to convert ROS image message to OpenCV image
         self._bridge = CvBridge()
