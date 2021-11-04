@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot>
+  <material name="light_grey">
+    <color rgba="0.95 0.95 0.95 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+</robot>

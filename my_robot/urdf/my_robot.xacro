@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo"/>
+  <xacro:include filename="$(find my_robot)/urdf/materials.urdf"/>
 
   <link name="base_link"></link>
 
