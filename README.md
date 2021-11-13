@@ -29,7 +29,7 @@ To build from source, clone the latest version from this repository into your ca
 
 ``` bash
 cd catkin_ws/src
-git clone https://github.com/7555G/ball-chaser-bot
+git clone https://github.com/gsotirchos/ball-chaser-bot
 cd ../
 rosdep install --from-paths . --ignore-src
 catkin_make
@@ -101,7 +101,7 @@ Processes the camera image published at `/camera/rgb/image_raw` and requests the
 
 ## Bugs & Feature Requests
 
-Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/ball-chaser-bot/issues).
+Please report bugs and request features using the [Issue Tracker](https://github.com/gsotirchos/ball-chaser-bot/issues).
 
 ROS: http://www.ros.org</br>
 Gazebo plugin: http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive</br>
